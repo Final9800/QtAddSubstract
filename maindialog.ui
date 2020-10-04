@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainDialog</class>
+ <widget class="QDialog" name="MainDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>335</width>
+    <height>195</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainDialog</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>30</y>
+     <width>245</width>
+     <height>114</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="labelInput1">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Input Number 1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="inputEdit1">
+      <property name="inputMethodHints">
+       <set>Qt::ImhDigitsOnly</set>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>Input Digits</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="labelInput2">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Input Number 2</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="inputEdit2">
+      <property name="inputMethodHints">
+       <set>Qt::ImhDigitsOnly</set>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>Input Digits</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QPushButton" name="pushButtonAdd">
+      <property name="text">
+       <string>Add</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QPushButton" name="pushButtonSubstract">
+      <property name="text">
+       <string>Substract</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="labelResult">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Result</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLineEdit" name="resultEdit">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhDigitsOnly</set>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="placeholderText">
+       <string>Result</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
