@@ -21,8 +21,9 @@ private slots:
 
     void on_pushButtonSubstract_clicked();
 
+    void on_pushButtonCalculate_clicked();
 
-    void on_inputEdit1_inputRejected();
+    void on_comboBoxOperator_currentIndexChanged(int index);
 
 private:
     Ui::MainDialog *ui;
