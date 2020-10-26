@@ -6,6 +6,9 @@ MainDialog::MainDialog(QWidget *parent)
     , ui(new Ui::MainDialog)
 {
     ui->setupUi(this);
+
+    ui->groupBoxBMI->hide();
+    layout()->setSizeConstraint(QLayout::SetFixedSize);
 }
 
 MainDialog::~MainDialog()
@@ -80,5 +83,25 @@ void MainDialog::on_comboBoxOperator_currentIndexChanged(int index)
         ui->pushButtonCalculate->setDisabled(true);
         ui->pushButtonAdd->setDisabled(false);
         ui->pushButtonSubstract->setDisabled(false);
+    }
+}
+
+void MainDialog::on_pushButtonCalculateBMI_clicked()
+{
+    double weight = ui->inputEditWeight->text().toDouble();
+    double height = ui->inputEditHeight->text().toDouble()/100;
+    double result = weight/(height*height);
+    if(result<18.5){
+        ui->LineEditResultBMI->setText(QString::number(result,'f', 2)+"Underweight");
+    }else if(result<25.0 && result >= 18.5){
+        ui->LineEditResultBMI->setText(QString::number(result,'f', 2)+"Normal");
+    }else if(result<30.0 && result >= 25.0){
+        ui->LineEditResultBMI->setText(QString::number(result,'f', 2)+"Overweight");
+    }else if(result<35.0 && result >= 30.0){
+        ui->LineEditResultBMI->setText(QString::number(result,'f', 2)+"Obesity Class I");
+    }else if(result<40.0 && result >= 35.0){
+        ui->LineEditResultBMI->setText(QString::number(result,'f', 2)+"Obesity Class II");
+    }else if(result >= 40.0){
+        ui->LineEditResultBMI->setText(QString::number(result,'f', 2)+"Obesity Class III");
     }
 }

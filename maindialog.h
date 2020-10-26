@@ -25,6 +25,8 @@ private slots:
 
     void on_comboBoxOperator_currentIndexChanged(int index);
 
+    void on_pushButtonCalculateBMI_clicked();
+
 private:
     Ui::MainDialog *ui;
 };
